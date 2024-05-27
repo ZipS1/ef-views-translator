@@ -11,7 +11,7 @@ home_view_file_paths = cwd.glob(r"Views\Home\*")
 views_file_paths = list(set(cwd.glob(r"Views\*\*")) - set(home_view_file_paths))
 
 for f in views_file_paths:
-    with open(f, "r") as file:
+    with open(f, "r", encoding="utf-8") as file:
         view_name = f.parent.name
         translation = views_translations[view_name]
         content = file.read()
