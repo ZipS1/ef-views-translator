@@ -53,8 +53,8 @@ for f in views_file_paths:
                     f"<h4>{view_name}</h4>", f"<h4>{translation}</h4>"
                 )
                 content = content.replace(
-                    'asp-route-id="@Model?.DocumentId">Edit</a>',
-                    'asp-route-id="@Model?.DocumentId">Редактировать</a>',
+                    '>Edit</a>',
+                    '>Редактировать</a>',
                 )
                 content = content.replace("Back to List", "Назад к списку")
             case "Edit":
