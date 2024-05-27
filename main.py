@@ -1,8 +1,7 @@
 import pathlib
 
 views_translations = {
-    "Authors": "Авторы",
-    "Documents": "Документы",
+    "<Название модели>": "<Перевод>",
 }
 
 cwd = pathlib.Path.cwd()
