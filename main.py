@@ -4,7 +4,6 @@ views_translations = {
     "Authors": "Авторы",
     "Documents": "Документы",
 }
-TRANSLATE_HOME = True
 
 cwd = pathlib.Path.cwd()
 home_view_file_paths = cwd.glob(r"Views\Home\*")
@@ -53,8 +52,8 @@ for f in views_file_paths:
                     f"<h4>{view_name}</h4>", f"<h4>{translation}</h4>"
                 )
                 content = content.replace(
-                    '>Edit</a>',
-                    '>Редактировать</a>',
+                    ">Edit</a>",
+                    ">Редактировать</a>",
                 )
                 content = content.replace("Back to List", "Назад к списку")
             case "Edit":
@@ -87,6 +86,6 @@ for f in views_file_paths:
                     'asp-route-id="@item.Id">Delete</a>',
                     'asp-route-id="@item.Id">Удалить</a>',
                 )
-    
+
     with open(f, "w", encoding="utf-8") as file:
         file.write(content)
