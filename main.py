@@ -7,7 +7,8 @@ views_translations = {
 
 cwd = pathlib.Path.cwd()
 home_view_file_paths = cwd.glob(r"Views\Home\*")
-views_file_paths = list(set(cwd.glob(r"Views\*\*")) - set(home_view_file_paths))
+shared_view_file_paths = cwd.glob(r"Views\Shared\*")
+views_file_paths = list(set(cwd.glob(r"Views\*\*")) - set(home_view_file_paths) - set(shared_view_file_paths))
 
 for f in views_file_paths:
     with open(f, "r", encoding="utf-8") as file:
