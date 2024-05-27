@@ -75,16 +75,16 @@ for f in views_file_paths:
                 content = content.replace("<h1>Index</h1>", f"<h1>{translation}</h1>")
                 content = content.replace("Create New", "Создать")
                 content = content.replace(
-                    'asp-route-id="@item.Id">Edit</a>',
-                    'asp-route-id="@item.Id">Редактировать</a>',
+                    '>Edit</a>',
+                    '>Редактировать</a>',
                 )
                 content = content.replace(
-                    'asp-route-id="@item.Id">Details</a>',
-                    'asp-route-id="@item.Id">Детали</a>',
+                    '>Details</a>',
+                    '>Детали</a>',
                 )
                 content = content.replace(
-                    'asp-route-id="@item.Id">Delete</a>',
-                    'asp-route-id="@item.Id">Удалить</a>',
+                    '>Delete</a>',
+                    '>Удалить</a>',
                 )
 
     with open(f, "w", encoding="utf-8") as file:
